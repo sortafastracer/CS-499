@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.25">
+  <title>CS 499 Mark McCormack</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const repoName = 'sortafastracer/CS-499';
+      const apiUrl = `https://api.github.com/repos/${repoName}/contents/`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          const filesList = document.getElementById('files-list');
+          data.forEach(file => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = file.html_url;  // Link to view the file on GitHub
+            link.textContent = file.name;
+            link.target = '_blank';
+            listItem.appendChild(link);
+            filesList.appendChild(listItem);
+          });
+        })
+        .catch(error => console.error('Error fetching repository files:', error));
+    });
+  </script>
+</head>
+
+<body>
+  <h1>CS 499 SNHU Computer Science Capstone</h1>
+  <h3>Mark McCormack</h3>
+  <h2>Repository Files</h2>
+  <ul id="files-list"></ul>
+</body>
+
+</html>
