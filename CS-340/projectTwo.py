@@ -12,7 +12,6 @@ class AnimalShelter(object):
         self.collection = self.database['animals']
         pprint.pprint("Connected to Database")
             
-        
     def create(self, data):
         if data is not None:
             inserted = self.collection.insert_one(data)
