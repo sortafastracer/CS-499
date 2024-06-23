@@ -1,9 +1,36 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.25">
   <title>CS 499 Mark McCormack</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+  </style>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const repoName = 'sortafastracer/CS-499';
@@ -29,8 +56,57 @@
 </head>
 
 <body>
-  <h1>CS 499 SNHU Computer Science Capstone</h1>
-  <h3>Mark McCormack</h3>
+  <div class="container">
+    <h1>Professional Self-Assessment</h1>
+    <p>As a current Platform Engineer, completing the coursework throughout the computer science program and developing
+      this ePortfolio has been instrumental in highlighting my strengths, shaping my professional goals and values, and
+      enhancing my employability in the computer science field. This ePortfolio showcases my technical skills, while my
+      work experience demonstrates my ability to work effectively in team environments, communicate with stakeholders,
+      and apply theoretical knowledge to practical problems. Below is a detailed assessment of how my experiences and
+      the artifacts included in this portfolio demonstrate my comprehensive skill set.</p>
+
+    <p>Throughout the program, I had to think carefully about effective ways to communicate with stakeholders and
+      collaborate in a team environment. These exercises were invaluable, as I communicate almost daily with
+      stakeholders on my contracts and must find creative ways to explain technical issues or common pitfalls
+      effectively. I continue to learn from these experiences at work, and this CS program has been beneficial beyond
+      just technical skills. It has taught me the importance of clear communication, division of tasks based on
+      individual strengths, as well as the use of version control systems like Git to manage code collaboratively.</p>
+
+    <p>Outside of coursework, I participated in hackathons where I worked with diverse teams to brainstorm, design, and
+      implement solutions within tight deadlines. For instance my team had to work tirelessly for a few weeks to prepare
+      our bespoke on prem kubernetes solution for a very important customer. We gathered up some previously used Lambda
+      servers and set out configuring all the sys admin stuff like networking and disk raid, as well as K3S which is an
+      open source lightweight kubernetes architecture. The biggest challenge was figuring out what I needed to do to
+      make our massive GitLab pipeline that deploys our entire infrastructure and AI/ML application to Azure or AWS work
+      on our bare metal hardware. These hackathons come up a couple times a year and are a great exercise for becoming a
+      well rounded engineer because it’s all up to you, from raid configuration, kubernetes troubleshooting, automation,
+      to AI/ML software engineering. These experiences honed my ability to quickly adapt to different roles and
+      contribute effectively to team success.</p>
+
+    <p>Most of my experience with data structures and algorithms relates to platform automation pipelines and bash,
+      python scripts. These algorithms usually need to search or sort a long list of things like dependencies for
+      example, and return some output, and I often need to understand the data structure of the input when I’m
+      automating some data retrieval tasks like getting the name of some kubernetes resource using the jq (json query)
+      command line tool. This CS program has gone way deeper on algorithms and the machine learning course has been very
+      enlightening for an engineer with more of an operations background. Something cool I learned about in this
+      program, and which I am on the lookout to implement professionally, is asynchronous data loading and operations to
+      avoid blocking the main event thread which increases user interface and experience with the application.</p>
+
+    <p>During this capstone event I enhanced my artifacts to provide better security, which can be as simple as using
+      environment variables to store sensitive information such as database credentials instead of hardcoding them, and
+      thereby storing them in a repository which is not good practice. This change needs to be accounted for in the
+      deployment of the app by using something like a bash script to set up the environment beforehand, which can all be
+      done with automation from a pipeline. For software engineering, this program has hammered in the best practices
+      surrounding logging configuration for troubleshooting, proper input validation, and error handling. With this I
+      have been able to reduce my reliance on rudimentary bash scripts and have been finding ways to use python for some
+      of my automation tasks instead, which opens a whole new world of versatility.</p>
+
+    <p>Surprisingly, I haven’t run into databases much in my career to this point beyond just providing postgres, mongo,
+      or mysql as part of my kubernetes platform offering to our development teams. This CS program has significantly
+      enhanced my skills, providing me with valuable experience in configuring and manipulating both SQL and NoSQL
+      databases using CRUD operations for example.</p>
+  </div>
+
   <h2>Repository Files</h2>
   <ul id="files-list"></ul>
 </body>
